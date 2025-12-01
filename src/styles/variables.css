@@ -1,0 +1,16 @@
+:root {
+    --main-color: #0b1526; /* Azul escuro principal */
+    --dark-color: #000716; /* Azul muito escuro */
+    --secondary-dark-color: #0a1a2e; /* Azul escuro secundário */
+    --light-color: #90caf9; /* Azul claro */
+    --contrast-color: #f3b633; /* Cor de contraste */
+    --contrast-hard-color: #f0ae20;
+    --differential-color: #58fcd5; /* Cor diferencial */
+    --background-color: #f0f4f8; /* Azul muito claro para fundo */
+    --color-gray: #e8edf4;
+    --text-color: #000; /* Cor do texto principal */
+    --link-color: #1a73e8; /* Azul para links */
+    --link-hover-color: #185abc; /* Azul mais escuro para hover de links */
+    --pagination-active-background: #e3f2fd;
+    --pagination-active-border: #90caf9;
+}
