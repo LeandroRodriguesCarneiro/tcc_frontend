@@ -19,4 +19,3 @@ build
 
 # Variáveis de ambiente secretas (se houver)
 .env
-.env.*
