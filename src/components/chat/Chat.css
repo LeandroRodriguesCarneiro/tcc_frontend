@@ -1,0 +1,198 @@
+.chat-page {
+  display: flex;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.chat-sidebar {
+  width: 280px;
+  border-right: 1px solid var(--color-gray);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(180deg, var(--main-color), var(--secondary-dark-color));
+  color: #fff;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  background: var(--contrast-hard-color);
+  color: var(--dark-color);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: var(--contrast-color);
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.history-item {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  background-color: rgba(11, 21, 38, 0.6);
+
+  /* 🎯 CORREÇÃO PRINCIPAL: Borda transparente para estabilidade */
+  border: 1px solid transparent;
+
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.history-item:hover {
+  background-color: rgba(9, 27, 52, 0.85);
+
+  /* Apenas muda a cor da borda */
+  border-color: var(--differential-color);
+
+  /* Removido transform: translateY(-1px) para evitar "salto" */
+}
+
+.history-item.selected {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border-color: var(--differential-color);
+
+  /* Adicionado box-shadow mais notável, mantendo a estabilidade */
+  box-shadow: 0 0 0 1px var(--differential-color);
+}
+
+.history-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.history-meta {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+/* --- Resto do Chat (sem alterações) --- */
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+
+.chat-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.conversation-id {
+  font-size: 0.8rem;
+  color: var(--link-color);
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: radial-gradient(circle at top left, #ffffff 0, #f0f4f8 40%, #e8edf4 100%);
+}
+
+.message-bubble {
+  max-width: 50%; 
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.message-bubble.user {
+  background-color: var(--light-color);
+  margin-left: auto;
+  color: var(--dark-color);
+}
+
+.message-bubble.assistant {
+  background-color: #ffffff;
+  margin-right: auto;
+  color: var(--dark-color);
+}
+
+.message-role {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+.chat-input-area {
+  border-top: 1px solid var(--color-gray);
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #fff;
+}
+
+.chat-input-area textarea {
+  width: 100%;
+  min-height: 60px;
+  max-height: 300px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--color-gray);
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: none;
+  overflow-y: auto;
+}
+
+.chat-input-area textarea:focus {
+  outline: none;
+  border-color: var(--light-color);
+  box-shadow: 0 0 0 1px var(--light-color);
+}
+
+.send-button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(90deg, var(--contrast-color), var(--differential-color));
+  color: var(--dark-color);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.send-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.send-button:not(:disabled):hover {
+  background: linear-gradient(90deg, var(--contrast-hard-color), var(--differential-color));
+}
+
+.chat-error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+}

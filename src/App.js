@@ -67,7 +67,7 @@ function App() {
       updateAccessToken(newTokens);
       setTokens(newTokens);
       
-      const newCount = updateAccessToken(newTokens); // Retorna novo count
+      const newCount = updateAccessToken(newTokens); 
       setRefreshCount(newCount);
 
       return true;

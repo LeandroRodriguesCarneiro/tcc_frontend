@@ -1,0 +1,22 @@
+# Dependências locais (serão instaladas dentro do container)
+node_modules
+
+# Arquivos de log e cache
+npm-debug.log
+.npm
+
+# Configurações do editor/IDE
+.vscode
+.idea
+*.sublime-workspace
+
+# Arquivos de build do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Diretório de build (será criado na etapa de build, mas não deve ser copiado ANTES)
+build
+
+# Variáveis de ambiente secretas (se houver)
+.env
+.env.*
